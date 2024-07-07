@@ -1,6 +1,6 @@
 # 3D Printable DM Screen
 
-## Instructions to print
+## Instructions to print
 
 For this screen you need 2 `end-screens.stl`s (one for each... end).
 Print as many `mid-screens.stl`s as you like. Go nuts. Want 7? do it.
