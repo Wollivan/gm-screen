@@ -1,13 +1,13 @@
-midScreen();
+//midScreen();
 //endScreen();
-//hinge();
+hinge();
 
 /* BEGIN CODE */
 
 
 width=148;
 height=210;
-thickness=6;
+thickness=5;
 hingeHeight=20;
 filamentLength=hingeHeight+thickness*4;
 filamentD=1.9;
