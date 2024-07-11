@@ -1,16 +1,25 @@
+/* UNCOMMENT EACH MODEL TO RENDER THEM SEPARATELY */
 //midScreen();
 //endScreen();
 hinge();
 
 /* BEGIN CODE */
 
+/************/
+// This is the adjust the hole size you will put the filament through
+// change this to adjust the tolerance
+// 2.1 worked for me for 1.75mm filament
+filamentD=2.1;
+/************/
 
+$fn=100;
 width=148;
 height=210;
 thickness=5;
-hingeHeight=20;
-filamentLength=hingeHeight+thickness*4;
-filamentD=1.9;
+hingeGapHeight=20;
+hingeHeight=19.6; // is a multiple of 0.4 for the stand nozzle size
+filamentLength=hingeGapHeight+thickness*4;
+
 
 module filament() {
     rotate([-90,0,0])
@@ -48,14 +57,14 @@ module hinge() {
 }
 
 module hingeGap() {
-    cube([thickness*2, hingeHeight, thickness]);
+    cube([thickness*2, hingeGapHeight, thickness]);
 }
 
 module doubleHingeGap() {
     translate([-thickness,thickness*2,0])
     hingeGap();
 
-    translate([-thickness,height-thickness*2-hingeHeight,0])
+    translate([-thickness,height-thickness*2-hingeGapHeight,0])
     hingeGap();
 }
 
@@ -91,10 +100,3 @@ module midScreen() {
         doubleFilamentGap();
     }
 }
-
-
-
-
-
-
-
