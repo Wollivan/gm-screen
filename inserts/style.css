@@ -3,11 +3,13 @@
   box-sizing: border-box;
   color: #262626;
 }
+
 .page {
   width: 138mm;
   height: 200mm;
   border: 1px solid #262626;
 }
+
 table {
   width: 95%;
   border-collapse: collapse;
@@ -15,37 +17,46 @@ table {
   border: none;
   font-size: 12.5px;
 }
+
 .gapped {
   border-collapse: unset;
   border-spacing: 10px 0;
 }
+
 th {
   background-color: #262626;
   color: #f1f1f1;
 }
+
 th,
 td {
   width: 25%;
 }
+
 td {
   padding-left: 5px;
 }
+
 tr:nth-child(odd) {
   background-color: #d9d9d9;
 }
+
 .empty {
   background-color: #fff;
   border: none;
 }
+
 .rules-img {
   height: 100%;
   margin: 0 auto;
   display: block;
 }
+
 h2 {
   text-align: center;
   font-size: 20px;
 }
+
 .sheet {
   display: flex;
   justify-content: center;
@@ -55,6 +66,7 @@ h2 {
   height: 210mm;
   border: 1px dashed black;
 }
+
 .loot tr th:nth-child(1),
 .loot tr th:nth-child(3),
 .loot tr td:nth-child(1),
@@ -62,20 +74,27 @@ h2 {
   width: 5%;
 }
 
+button {
+  margin: 2rem 0;
+}
+
 @media print {
   @page {
     size: landscape;
     margin: 0;
   }
+
   table tr,
   table td,
   table th {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
+
   .sheet {
     border: none;
   }
+
   .hideonprint {
     display: none;
   }
